@@ -43,9 +43,9 @@ plotAreaPerSalespersonData <- function(d, cutoff=5000) {
   g <- ggplot(d[d$areacovered<cutoff,]) +
     geom_histogram(aes(areacovered, group=covered_by, fill=covered_by),
                    position = "dodge",
-                   binwidth=50) +
+                   binwidth=2) +
     ylab("Number of salespersons") +
-    xlab("Area covered by accounts (sum of pairwise distances)")
+    xlab("Area covered by accounts (average of pairwise distances)")
   g
 }
 

@@ -17,7 +17,7 @@ computeArea <- function(latitude, longitude) {
   
   pointPairs <- as.data.frame(t(allCombinations))
   
-  sum(distance(pointPairs$V1, pointPairs$V2))
+  mean(distance(pointPairs$V1, pointPairs$V2))
   }
 }
 
